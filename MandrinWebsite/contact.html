@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANDARIN | Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <nav>
+        <div class="logo">Mandarin.</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="active">Contact</a>
+        </div>
+    </nav>
+
+    <div class="contact-hero">
+        <p style="letter-spacing: 2px; color: #888; font-weight: bold; margin-bottom: 20px;">READY TO START?</p>
+        
+        <a href="mailto:mandarin.designhub@gmail.com" class="big-link">LET'S TALK.</a>
+        
+        <div style="margin-top: 30px; display: flex; flex-direction: column; gap: 10px;">
+            <p style="color: #fff; font-size: 1.2rem;">mandarin.designhub@gmail.com</p>
+            <p style="color: var(--primary); font-size: 1.2rem; font-weight: bold;">+91 8987839060</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="form-container">
+            <form action="https://formsubmit.co/mandarin.designhub@gmail.com" method="POST">
+                
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="New Submission from Mandarin Website!">
+
+                <h3 style="color: #fff; font-family: 'Arial Black', sans-serif; text-transform: uppercase; margin-bottom: 30px; text-align: center;">Send a Message</h3>
+                
+                <div class="input-box">
+                    <input type="text" name="name" required>
+                    <span>Full Name</span>
+                </div>
+
+                <div class="input-box">
+                    <input type="email" name="email" required>
+                    <span>Email Address</span>
+                </div>
+
+                <div class="input-box">
+                    <input type="text" name="subject" required>
+                    <span>Subject</span>
+                </div>
+
+                <div class="input-box">
+                    <textarea name="message" required cols="30" rows="4"></textarea>
+                    <span>Your Message...</span>
+                </div>
+
+                <button type="submit" class="submit-btn">Transmit Data</button>
+            </form>
+        </div>
+    </div>
+
+    <footer><p>&copy; 2026 Mandarin Media Agency.</p></footer>
+
+    <script>
+        const body = document.querySelector('body');
+        const symbols = ['+', 'x', 'o', '///', '::', '*'];
+        // Particles
+        for (let i = 0; i < 40; i++) {
+            let div = document.createElement('div');
+            div.classList.add('cyber-particle');
+            div.innerText = symbols[Math.floor(Math.random() * symbols.length)];
+            div.style.left = Math.random() * 100 + 'vw';
+            div.style.animationDuration = (Math.random() * 10 + 10) + 's';
+            div.style.animationDelay = (Math.random() * 5) + 's';
+            div.style.fontSize = (Math.random() * 20 + 10) + 'px';
+            body.appendChild(div);
+        }
+        // Matrix Rain
+        for (let i = 0; i < 20; i++) {
+            let drop = document.createElement('div');
+            drop.classList.add('binary-drop');
+            drop.innerText = Math.random() > 0.5 ? '1' : '0';
+            drop.style.left = Math.random() * 100 + 'vw';
+            drop.style.animationDuration = (Math.random() * 5 + 3) + 's';
+            body.appendChild(drop);
+        }
+        // Mouse Cursor
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+        window.addEventListener('mousemove', (e) => {
+            const posX = e.clientX;
+            const posY = e.clientY;
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+            cursorOutline.animate({ left: `${posX}px`, top: `${posY}px` }, { duration: 500, fill: "forwards" });
+        });
+    </script>
+</body>
+</html>

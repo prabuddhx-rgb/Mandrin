@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANDRIN | About</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <nav>
+        <div class="logo">Mandrin.</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>The Agency</h1>
+    </header>
+
+    <div class="container" style="max-width: 900px; margin: 0 auto; text-align: center;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 40px; line-height: 1.3; color: #fff;">
+            We bridge the gap between <span style="color: var(--primary);">Imagination</span> and <span style="color: var(--cyan);">Reality</span>.
+        </h2>
+        
+        <div style="font-size: 1.2rem; line-height: 1.8; color: #aaa; text-align: left; background: #111; padding: 40px; border-radius: 20px; border: 1px solid #333;">
+            <p style="margin-bottom: 20px;">
+                <strong style="color: #fff;">Mandrin</strong> is a forward-thinking media agency focused on the future of digital content. Founded in 2026, we noticed that traditional media was moving too slow for the AI revolution.
+            </p>
+            <p>
+                We combine traditional artistic skills with the latest technology in AI, 3D, and VFX to deliver results that stand out in a crowded market. Whether you are a startup needing a brand identity or a production house needing high-end compositing, our team is equipped to deliver excellence.
+            </p>
+        </div>
+    </div>
+
+    <footer><p>&copy; 2026 Mandrin Media Agency.</p></footer>
+
+    <script>
+        const body = document.querySelector('body');
+        const symbols = ['+', 'x', 'o', '///', '::', '*'];
+        for (let i = 0; i < 40; i++) {
+            let div = document.createElement('div');
+            div.classList.add('cyber-particle');
+            div.innerText = symbols[Math.floor(Math.random() * symbols.length)];
+            div.style.left = Math.random() * 100 + 'vw';
+            div.style.animationDuration = (Math.random() * 10 + 10) + 's';
+            div.style.animationDelay = (Math.random() * 5) + 's';
+            div.style.fontSize = (Math.random() * 20 + 10) + 'px';
+            body.appendChild(div);
+        }
+        for (let i = 0; i < 30; i++) {
+            let drop = document.createElement('div');
+            drop.classList.add('binary-drop');
+            drop.innerText = Math.random() > 0.5 ? '1010101' : '0101010';
+            drop.style.left = Math.random() * 100 + 'vw';
+            drop.style.animationDuration = (Math.random() * 5 + 3) + 's';
+            drop.style.animationDelay = Math.random() * 5 + 's';
+            drop.style.fontSize = (Math.random() * 10 + 10) + 'px';
+            body.appendChild(drop);
+        }
+        for (let i = 0; i < 5; i++) {
+            let scan = document.createElement('div');
+            scan.classList.add('scan-line');
+            scan.style.animationDuration = (Math.random() * 5 + 5) + 's';
+            scan.style.animationDelay = Math.random() * 5 + 's';
+            body.appendChild(scan);
+        }
+        for (let i = 0; i < 8; i++) {
+            let ring = document.createElement('div');
+            ring.classList.add('hud-ring');
+            ring.style.left = Math.random() * 80 + 10 + 'vw';
+            ring.style.top = Math.random() * 80 + 10 + 'vh';
+            let size = Math.random() * 200 + 50; 
+            ring.style.width = size + 'px';
+            ring.style.height = size + 'px';
+            ring.style.animationDuration = (Math.random() * 20 + 10) + 's';
+            body.appendChild(ring);
+        }
+        for (let i = 0; i < 50; i++) {
+            let dust = document.createElement('div');
+            dust.classList.add('nano-dust');
+            dust.style.left = Math.random() * 100 + 'vw';
+            dust.style.width = (Math.random() * 3 + 1) + 'px';
+            dust.style.height = dust.style.width;
+            dust.style.animationDuration = (Math.random() * 5 + 2) + 's';
+            dust.style.animationDelay = Math.random() * 5 + 's';
+            body.appendChild(dust);
+        }
+        const sysWords = ['SYSTEM_READY', 'VFX_LOAD', 'AI_CORE', 'RENDER', 'BUFFER', 'NODE_01', 'CYBER_NET'];
+        for (let i = 0; i < 15; i++) {
+            let txt = document.createElement('div');
+            txt.classList.add('system-text');
+            txt.innerText = sysWords[Math.floor(Math.random() * sysWords.length)];
+            txt.style.left = Math.random() * 90 + 'vw';
+            txt.style.top = Math.random() * 90 + 'vh';
+            txt.style.animationDuration = (Math.random() * 4 + 2) + 's';
+            txt.style.animationDelay = Math.random() * 5 + 's';
+            body.appendChild(txt);
+        }
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+        window.addEventListener('mousemove', (e) => {
+            const posX = e.clientX;
+            const posY = e.clientY;
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+            cursorOutline.animate({ left: `${posX}px`, top: `${posY}px` }, { duration: 500, fill: "forwards" });
+        });
+    </script>
+</body>
+</html>

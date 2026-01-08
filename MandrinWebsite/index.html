@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANDRIN | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <nav>
+        <div class="logo">Mandrin.</div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <img src="hero-logo.png" alt="Agency Logo" class="hero-logo-img">
+        <h1>We Create <br><span>Digital Reality</span></h1>
+        <p style="color: #ccc; margin-top: 20px; letter-spacing: 3px; font-weight: bold;">
+            AI GENERATION  <span style="color:var(--primary)">///</span>  VFX  <span style="color:var(--primary)">///</span>  3D ANIMATION
+        </p>
+    </section>
+
+    <div class="marquee">
+        <div class="marquee-content">
+            GRAPHIC DESIGN  ///  AI GENERATION  ///  3D ANIMATION  ///  VFX & COMPOSITING  ///  BRANDING  ///  GRAPHIC DESIGN  ///  AI GENERATION  ///  3D ANIMATION  ///  VFX & COMPOSITING  ///  BRANDING  ///
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">Our Expertise</h2>
+        <div class="grid-box">
+            <div class="card">
+                <div class="card-number">01</div>
+                <div class="card-content">
+                    <h3>AI Generation</h3>
+                    <p>Next-Gen Visuals</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-number">02</div>
+                <div class="card-content">
+                    <h3>3D Animation</h3>
+                    <p>Product & Character</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-number">03</div>
+                <div class="card-content">
+                    <h3>VFX & Comp</h3>
+                    <p>Cinematic Effects</p>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="services.html" style="font-size: 1.2rem; border-bottom: 2px solid var(--primary); color: var(--primary); padding-bottom: 5px;">VIEW ALL SERVICES &rarr;</a>
+        </div>
+    </div>
+
+    <footer><p>&copy; 2026 Mandrin Media Agency.</p></footer>
+
+    <script>
+        const body = document.querySelector('body');
+
+        // 1. ORIGINAL PARTICLES (40)
+        const symbols = ['+', 'x', 'o', '///', '::', '*'];
+        for (let i = 0; i < 40; i++) {
+            let div = document.createElement('div');
+            div.classList.add('cyber-particle');
+            div.innerText = symbols[Math.floor(Math.random() * symbols.length)];
+            div.style.left = Math.random() * 100 + 'vw';
+            div.style.animationDuration = (Math.random() * 10 + 10) + 's';
+            div.style.animationDelay = (Math.random() * 5) + 's';
+            div.style.fontSize = (Math.random() * 20 + 10) + 'px';
+            body.appendChild(div);
+        }
+
+        // 2. MATRIX RAIN (30)
+        for (let i = 0; i < 30; i++) {
+            let drop = document.createElement('div');
+            drop.classList.add('binary-drop');
+            drop.innerText = Math.random() > 0.5 ? '1010101' : '0101010';
+            drop.style.left = Math.random() * 100 + 'vw';
+            drop.style.animationDuration = (Math.random() * 5 + 3) + 's';
+            drop.style.animationDelay = Math.random() * 5 + 's';
+            drop.style.fontSize = (Math.random() * 10 + 10) + 'px';
+            body.appendChild(drop);
+        }
+
+        // 3. SCAN LINES (5)
+        for (let i = 0; i < 5; i++) {
+            let scan = document.createElement('div');
+            scan.classList.add('scan-line');
+            scan.style.animationDuration = (Math.random() * 5 + 5) + 's';
+            scan.style.animationDelay = Math.random() * 5 + 's';
+            body.appendChild(scan);
+        }
+
+        // 4. ROTATING HUD RINGS (8)
+        for (let i = 0; i < 8; i++) {
+            let ring = document.createElement('div');
+            ring.classList.add('hud-ring');
+            ring.style.left = Math.random() * 80 + 10 + 'vw';
+            ring.style.top = Math.random() * 80 + 10 + 'vh';
+            let size = Math.random() * 200 + 50; 
+            ring.style.width = size + 'px';
+            ring.style.height = size + 'px';
+            ring.style.animationDuration = (Math.random() * 20 + 10) + 's';
+            body.appendChild(ring);
+        }
+
+        // 5. NANO DUST (50)
+        for (let i = 0; i < 50; i++) {
+            let dust = document.createElement('div');
+            dust.classList.add('nano-dust');
+            dust.style.left = Math.random() * 100 + 'vw';
+            dust.style.width = (Math.random() * 3 + 1) + 'px';
+            dust.style.height = dust.style.width;
+            dust.style.animationDuration = (Math.random() * 5 + 2) + 's';
+            dust.style.animationDelay = Math.random() * 5 + 's';
+            body.appendChild(dust);
+        }
+
+        // 6. SYSTEM TEXT (15)
+        const sysWords = ['SYSTEM_READY', 'VFX_LOAD', 'AI_CORE', 'RENDER', 'BUFFER', 'NODE_01', 'CYBER_NET'];
+        for (let i = 0; i < 15; i++) {
+            let txt = document.createElement('div');
+            txt.classList.add('system-text');
+            txt.innerText = sysWords[Math.floor(Math.random() * sysWords.length)];
+            txt.style.left = Math.random() * 90 + 'vw';
+            txt.style.top = Math.random() * 90 + 'vh';
+            txt.style.animationDuration = (Math.random() * 4 + 2) + 's';
+            txt.style.animationDelay = Math.random() * 5 + 's';
+            body.appendChild(txt);
+        }
+
+        // CUSTOM MOUSE CURSOR
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+        window.addEventListener('mousemove', (e) => {
+            const posX = e.clientX;
+            const posY = e.clientY;
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+            cursorOutline.animate({ left: `${posX}px`, top: `${posY}px` }, { duration: 500, fill: "forwards" });
+        });
+    </script>
+</body>
+</html>
